@@ -10,16 +10,16 @@ namespace RegexProblem
 
             while (true)
             {
-                Console.WriteLine("\nPlease Enter your Email");
+                Console.WriteLine("\nPlease Enter your mobile Number");
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Za-z]{1,10}.?[a-z]{1,15}@[a-z]{1,5}.(co|org|com).(in|co|com|us)?$");
+                Regex r = new Regex("^[0-9]{2} [1-9][0-9]{9}$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your email is valid: " + true);
+                    Console.WriteLine("your Mobile number is valid  ");
                 }
                 else
                 {
-                    Console.WriteLine("Entered email is not valid");
+                    Console.WriteLine("Entered Mobile Number is not valid is not valid");
                 }
             }
         }
