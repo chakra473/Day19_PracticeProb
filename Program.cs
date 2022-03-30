@@ -10,16 +10,16 @@ namespace RegexProblem
 
             while (true)
             {
-                Console.WriteLine("\nPlease Enter Password");
+                Console.WriteLine("\nPlease Enter your email");
                 string input = Console.ReadLine();
-                Regex r = new Regex("^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&*^])[0-9A-Za-z!@#$%&*]{8,}$");
+                Regex r = new Regex("^[A-Za-z0-9.+-]{1,}[a-zA-Z0-9]@[a-z0-9]{1,}.(co|org|com|in|us|net|au|com.com|com.au)$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("Entered Password is valid  ");
+                    Console.WriteLine("Entered Email is valid  ");
                 }
                 else
                 {
-                    Console.WriteLine("Entered Password is not valid");
+                    Console.WriteLine("Entered Email is not valid");
                 }
             }
         }
