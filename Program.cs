@@ -10,16 +10,16 @@ namespace RegexProblem
 
             while (true)
             {
-                Console.WriteLine("\nPlease Enter your mobile Number");
+                Console.WriteLine("\nPlease Enter Password");
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[0-9]{2} [1-9][0-9]{9}$");
+                Regex r = new Regex("^[0-9A-Za-z]{8,}$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your Mobile number is valid  ");
+                    Console.WriteLine("Entered Password is valid  ");
                 }
                 else
                 {
-                    Console.WriteLine("Entered Mobile Number is not valid is not valid");
+                    Console.WriteLine("Entered Password is not valid is not valid");
                 }
             }
         }
