@@ -10,16 +10,16 @@ namespace RegexProblem
 
             while (true)
             {
-                Console.WriteLine("\nPlease Enter your Last name");
+                Console.WriteLine("\nPlease Enter your Email");
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Z][a-z]{2,}$");
+                Regex r = new Regex("^[A-Za-z]{1,10}.?[a-z]{1,15}@[a-z]{1,5}.(co|org|com).(in|co|com|us)?$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your Last name is " + true);
+                    Console.WriteLine("your email is valid: " + true);
                 }
                 else
                 {
-                    Console.WriteLine("Please enter  minimum 3 character along with first character of Last name should in upper case");
+                    Console.WriteLine("Entered email is not valid");
                 }
             }
         }
